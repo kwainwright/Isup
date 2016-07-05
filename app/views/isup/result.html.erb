@@ -1,0 +1,11 @@
+<div class="validate">
+	<% if @status == "URL Format Issue" %>
+		<%= render 'format_error_form' %>
+	<% elsif @status == "Available" %>
+		<%= render 'up_form' %>
+	<% else @status == "Not Available" %>
+		<%= render 'not_up_form' %>
+	<% end %>	
+	</br>
+	<h1><%= link_to 'Check another site?', isup_path %> </h1>
+</div>

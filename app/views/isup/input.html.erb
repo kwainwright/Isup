@@ -1,0 +1,5 @@
+<div id="request_form">
+	<%= form_tag(isup_result_path) do %>
+			<p>Is <%= text_field_tag :url %> down for everyone <%= submit_tag 'or just me' %></p>
+	<% end %>
+</div>
