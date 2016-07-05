@@ -1,9 +1,9 @@
 <div class="validate">
-	<% if @status == "URL Format Issue" %>
+	<% if @status == "URL_Format_Issue" %>
 		<%= render 'format_error_form' %>
 	<% elsif @status == "Available" %>
 		<%= render 'up_form' %>
-	<% else @status == "Not Available" %>
+	<% else @status == "Not_Available" %>
 		<%= render 'not_up_form' %>
 	<% end %>	
 	</br>
