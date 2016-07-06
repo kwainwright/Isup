@@ -1,11 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  url: MyString
-  timestamp: MyString
-  status: MyString
+  url: "http://www.google.com"
+  timestamp: "05/07/2016 19:37"
+  status: "Available"
 
 two:
   url: MyString
   timestamp: MyString
   status: MyString
+

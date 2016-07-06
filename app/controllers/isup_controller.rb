@@ -1,20 +1,26 @@
 class IsupController < ApplicationController
+  
   def input
   end
 
   def result
      @url_string = params[:url]
     
+    if @url_string.nil?
+      redirect_to isup_path
+      return
+    end
+    
     if !is_valid_url?(@url_string)
-      @status = "URL Format Issue"
+      @status = "URL_Format_Issue"
     else 
       if url_exist?(@url_string)
         @status = "Available"
       else
-        @status = "Not Available"
+        @status = "Not_Available"
       end
     end
-    
+  
     require 'date'
     current_time = DateTime.now
 

@@ -7,7 +7,7 @@ class IsupControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get result" do
-    get isup_result_url
+    post isup_result_url, :url => 'www.google.com' 
     assert_response :success
   end
 

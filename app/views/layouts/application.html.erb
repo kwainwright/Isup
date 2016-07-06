@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= "My-ISUP" %></title>
+  <title><%= "Down For Everyone Or Just Me?" %></title>
   <%= stylesheet_link_tag    "application", media: "all",
     "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %>">
-  <div id="banner">
-    <%= @page_title || "My-ISUP" %>
-  </div>
   <div id="main">
     <%= yield %>
-  </div>
+ </div>
 </body>
 </html>

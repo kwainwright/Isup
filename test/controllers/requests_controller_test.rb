@@ -17,7 +17,7 @@ class RequestsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create request" do
     assert_difference('Request.count') do
-      post requests_url, params: { request: { status: @request.status, timestamp: @request.timestamp, url: @request.url } }
+      post requests_url, params: { request: { status: "Available", timestamp: "05/07/2016 19:37", url: "www.google.com" } } 
     end
 
     assert_redirected_to request_url(Request.last)
@@ -31,11 +31,6 @@ class RequestsControllerTest < ActionDispatch::IntegrationTest
   test "should get edit" do
     get edit_request_url(@request)
     assert_response :success
-  end
-
-  test "should update request" do
-    patch request_url(@request), params: { request: { status: @request.status, timestamp: @request.timestamp, url: @request.url } }
-    assert_redirected_to request_url(@request)
   end
 
   test "should destroy request" do

@@ -1,5 +1,5 @@
 <div id="request_form">
 	<%= form_tag(isup_result_path) do %>
-	<h1>Is <%= text_field_tag(:url) %> down for everyone <%= submit_tag "or is it just me?", :class => "button" %></h1>
+	<h1>Is <%= text_field_tag(:url, nil, placeholder: 'google.com') %> down for everyone <%= submit_tag "or is it just me?", :class => "button" %></h1>
 	<% end %>
 </div>
